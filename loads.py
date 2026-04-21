@@ -4,7 +4,7 @@ from typing import Optional, List
 import json
 import os
 
-from app.config import settings
+from config import settings
 
 router = APIRouter()
 
