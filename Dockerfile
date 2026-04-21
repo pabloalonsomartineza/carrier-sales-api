@@ -9,6 +9,8 @@ COPY . .
 
 RUN mkdir -p data
 
+RUN python -c "from database import create_tables; create_tables()"
+
 EXPOSE 8000
 
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
