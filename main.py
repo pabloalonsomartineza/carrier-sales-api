@@ -4,8 +4,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 import uvicorn
 
-from app.routers import loads, carriers, calls
-from app.config import settings
+from routers import loads, carriers, calls
+from config import settings
 
 API_KEY_HEADER = APIKeyHeader(name="X-API-Key", auto_error=True)
 
@@ -64,4 +64,4 @@ def health_check():
 
 
 if __name__ == "__main__":
-    uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
