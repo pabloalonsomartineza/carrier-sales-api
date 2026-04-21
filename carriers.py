@@ -3,7 +3,7 @@ from pydantic import BaseModel
 from typing import Optional
 import httpx
 
-from app.config import settings
+from config import settings
 
 router = APIRouter()
 
