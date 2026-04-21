@@ -4,7 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 import uvicorn
 
-from routers import loads, carriers, calls
+import loads, carriers, calls
 from config import settings
 
 API_KEY_HEADER = APIKeyHeader(name="X-API-Key", auto_error=True)
