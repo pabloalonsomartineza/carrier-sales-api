@@ -1,0 +1,14 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - API_KEY=${API_KEY:-dev-secret-key-change-in-prod}
+      - FMCSA_API_KEY=${FMCSA_API_KEY:-}
+      - DATABASE_URL=sqlite:///./calls.db
+      - LOADS_FILE=data/loads.json
+      - MIN_RATE_FACTOR=0.85
+    volumes:
+      - ./data:/app/data
+      - ./calls.db:/app/calls.db
