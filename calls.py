@@ -4,8 +4,8 @@ from typing import Optional, List
 from sqlalchemy.orm import Session
 from datetime import datetime
 
-from app.database import get_db, CallRecord
-from app.config import settings
+from database import get_db, CallRecord
+from config import settings
 
 router = APIRouter()
 
